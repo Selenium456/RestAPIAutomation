@@ -1,0 +1,15 @@
+package Routes;
+
+public class PDGRoutes {
+	
+	private static final String demographics = "/demographics";
+	
+	private static final String update = "/update";
+	
+	private static final String create = "/create";
+	
+	private static final String getPDGId = "/getByPatientDemographicsId";
+	
+	
+
+}

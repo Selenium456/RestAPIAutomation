@@ -1,0 +1,19 @@
+package Steps;
+
+import Requests.PDGRequests;
+import cucumber.TestContext;
+
+public class BaseStep {
+	
+	private PDGRequests pdgRequests;
+	
+	public BaseStep(TestContext testContext) {
+		
+		pdgRequests = testContext.getPDGRequests();
+	}
+	
+	public PDGRequests getpdgRequests() {
+		return pdgRequests;
+	}
+
+}

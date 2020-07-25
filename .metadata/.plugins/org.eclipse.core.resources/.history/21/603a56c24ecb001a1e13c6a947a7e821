@@ -1,0 +1,10 @@
+package EndPoints;
+
+public class PatientDemoGraphicsEndPoints {
+	
+	public static void getDemoGraphics() {
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package Responses;
+
+import java.util.List;
+
+import ResponseModel.PDGResponse;
+
+public class Responses {
+	
+	public List<PDGResponse> pdgResponses;
+
+}

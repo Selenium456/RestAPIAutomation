@@ -1,0 +1,26 @@
+package EndPoints;
+
+import java.io.IOException;
+
+import Utils.ConfigReader;
+import io.restassured.RestAssured;
+
+public class PatientDemoGraphicsEndPoints {
+	
+	ConfigReader configread = null;
+	
+	
+	public PatientDemoGraphicsEndPoints() throws IOException {
+		
+		configread = new ConfigReader();
+		
+		configread.LoadConfigFile();
+	}
+	
+	
+	public static void getDemoGraphics() {
+		
+		
+	}
+
+}

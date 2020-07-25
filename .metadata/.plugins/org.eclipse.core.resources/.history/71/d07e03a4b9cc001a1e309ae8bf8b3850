@@ -1,0 +1,54 @@
+package Requests;
+
+import java.io.IOException;
+
+import RequestModels.PatientDemoGraphicsModel;
+import Utils.ConfigReader;
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PDGEndPoints {
+	
+	public static ConfigReader configread = null;
+	
+	
+	
+	
+	public static Response getDemoGraphics() throws IOException {
+		
+		configread = new ConfigReader();
+		configread.LoadConfigFile();
+		RestAssured.baseURI = configread.getURI();
+		
+		RequestSpecification request = RestAssured.given();
+		
+		Response response = request.request(Method.GET,"/demographics");
+		
+		return response;
+		
+	}
+	
+public static Response postDemoGraphics(String patientId, String namePrefix, String lastName, String firstName, String middleName, String nameSuffix, String gender, String dob, String preferredOfficialLanguage, String preferredSpokenLanguage, String sin, String createdBy, String createdDate, String modifiedBy, String modifiedDate) throws IOException {
+	
+		PatientDemoGraphicsModel pdgModel = new PatientDemoGraphicsModel(patientId,namePrefix,lastName,firstName,middleName,nameSuffix,gender,dob,preferredOfficialLanguage,preferredSpokenLanguage,sin,createdBy,createdDate,modifiedBy,modifiedDate);
+		
+		configread = new ConfigReader();
+		configread.LoadConfigFile();
+		RestAssured.baseURI = configread.getURI();
+		
+		RequestSpecification request = RestAssured.given();
+		
+		request.body(pdgModel);
+		
+		Response response = request.request(Method.POST,"/demographics/create");
+		
+		return response;
+		
+	}
+	
+	
+	
+
+}

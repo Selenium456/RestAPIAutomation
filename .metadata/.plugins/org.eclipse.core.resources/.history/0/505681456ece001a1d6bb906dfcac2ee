@@ -1,0 +1,24 @@
+package Responses;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ResponseModel.PDGResponse;
+
+public class PDGResponses {
+	
+	public List<PDGResponse> pdgResponses = new ArrayList<PDGResponse>();
+	
+	public PDGResponse pdgresponse;
+	
+	public PDGResponses() {
+		pdgresponse = new PDGResponse();
+	}
+	
+	public List<PDGResponse> getreponseObjects(){
+		
+		pdgResponses.add(pdgresponse);
+		return pdgResponses;
+	}
+
+}

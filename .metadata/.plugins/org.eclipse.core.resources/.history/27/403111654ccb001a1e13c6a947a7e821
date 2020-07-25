@@ -1,0 +1,21 @@
+package Utils;
+
+import java.io.InputStream;
+import java.util.Properties;
+
+public class ConfigReader {
+	
+	Properties prop = new Properties();
+	
+	String PropFileName = "Config.properties";
+	
+	InputStream ips = getClass().getClassLoader().getResourceAsStream(PropFileName);
+	
+	if(ips!=null) {
+		prop.load(ips);
+	}
+	
+	prop.load("src/main/resources/Config.properties");
+	
+
+}

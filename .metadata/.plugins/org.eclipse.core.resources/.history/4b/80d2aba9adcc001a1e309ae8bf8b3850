@@ -1,0 +1,53 @@
+package EndPoints;
+
+import java.io.IOException;
+
+import Utils.ConfigReader;
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PDGEndPoints {
+	
+	public static ConfigReader configread = null;
+	
+	
+	
+	
+	public static Response getDemoGraphics() throws IOException {
+		
+		configread = new ConfigReader();
+		configread.LoadConfigFile();
+		RestAssured.baseURI = configread.getURI();
+		
+		RequestSpecification request = RestAssured.given();
+		
+		Response response = request.request(Method.GET,"/demographics");
+		
+		return response;
+		
+	}
+	
+public static Response postDemoGraphics() throws IOException {
+	
+		PatinetDemoGraphicsModel pdgEndPoints = new PatinetDemoGraphicsModel();
+		
+		configread = new ConfigReader();
+		configread.LoadConfigFile();
+		RestAssured.baseURI = configread.getURI();
+		
+		RequestSpecification request = RestAssured.given();
+		
+		request.body(object)
+		
+		Response response = request.request(Method.POST,"/demographics/create");
+		
+		return response;
+		
+	}
+	
+	
+	
+
+}
