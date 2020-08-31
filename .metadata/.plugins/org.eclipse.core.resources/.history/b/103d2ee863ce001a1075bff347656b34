@@ -1,7 +1,0 @@
-package Responses;
-
-public class Responses {
-	
-	public List<Book> books;
-
-}

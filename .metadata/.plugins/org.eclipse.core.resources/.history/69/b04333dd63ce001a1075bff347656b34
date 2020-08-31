@@ -1,7 +1,0 @@
-package Responses;
-
-public class PDGResponse {
-	
-	public List<Book> books;
-
-}

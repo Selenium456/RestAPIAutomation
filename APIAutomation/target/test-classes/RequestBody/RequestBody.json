@@ -1,0 +1,4 @@
+{"Post":{"PatientDemographics" : {"patientId":"567892112368","namePrefix":"Mr","lastName":"Kiran","firstName":"Sai", "middleName":"V","nameSuffix":"Av", "gender":"M","dob":"1993-06-13T18:30:00.000Z","preferredOfficialLanguage":"Eng","preferredSpokenLanguage":"Eng","sin":"12234234","createdBy":"Kiran"}},
+"PUT":{"PatientDemographics" : {"patientId":"567892112368","lastName":"Kiran","firstName":"Sai","gender":"M","preferredOfficialLanguage":"Eng","preferredSpokenLanguage":"Eng","sin":"122345"}}
+
+}

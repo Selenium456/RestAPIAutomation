@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>REXEMR Cucumber Reports</td>
+        <td>1</td>
+      <td>16 Aug 2020, 11:28</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.theResonseIsNull()</td>
+              <td>1</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheGenderResponsebody()</td>
+              <td>1</td>
+              <td class="duration" data-value="47000000">0.047</td>
+              <td class="duration" data-value="47000000">0.047</td>
+              <td class="duration" data-value="47000000">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheGetAllPatientDemographicsListResponsebody()</td>
+              <td>1</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheNamePrefixResponsebody()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheNameSuffixResponsebody()</td>
+              <td>1</td>
+              <td class="duration" data-value="46000000">0.046</td>
+              <td class="duration" data-value="46000000">0.046</td>
+              <td class="duration" data-value="46000000">0.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheOfficialLanguageResponsebody()</td>
+              <td>1</td>
+              <td class="duration" data-value="49000000">0.049</td>
+              <td class="duration" data-value="49000000">0.049</td>
+              <td class="duration" data-value="49000000">0.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheResponsebody()</td>
+              <td>3</td>
+              <td class="duration" data-value="48000000">0.048</td>
+              <td class="duration" data-value="48000000">0.049</td>
+              <td class="duration" data-value="144000000">0.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheResponsebodyForRequestedPatientID()</td>
+              <td>1</td>
+              <td class="duration" data-value="50000000">0.050</td>
+              <td class="duration" data-value="50000000">0.050</td>
+              <td class="duration" data-value="50000000">0.050</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userExtractsTheResponseheader()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsDeleteRequestForPatientDemoGraphics()</td>
+              <td>1</td>
+              <td class="duration" data-value="587000000">0.587</td>
+              <td class="duration" data-value="587000000">0.587</td>
+              <td class="duration" data-value="587000000">0.587</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsGetAllGenderRequestForPatientDemoGraphics()</td>
+              <td>1</td>
+              <td class="duration" data-value="557000000">0.557</td>
+              <td class="duration" data-value="557000000">0.557</td>
+              <td class="duration" data-value="557000000">0.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsGetAllNamePrefixForPatientDemoGraphics()</td>
+              <td>1</td>
+              <td class="duration" data-value="553000000">0.553</td>
+              <td class="duration" data-value="553000000">0.553</td>
+              <td class="duration" data-value="553000000">0.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsGetAllNameSuffixForPatientDemoGraphics()</td>
+              <td>1</td>
+              <td class="duration" data-value="604000000">0.604</td>
+              <td class="duration" data-value="604000000">0.604</td>
+              <td class="duration" data-value="604000000">0.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsGetAllOfficialLanguageRequest()</td>
+              <td>1</td>
+              <td class="duration" data-value="462000000">0.462</td>
+              <td class="duration" data-value="462000000">0.462</td>
+              <td class="duration" data-value="462000000">0.462</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsGetAllPatientDemographicsListRequest()</td>
+              <td>1</td>
+              <td class="duration" data-value="541000000">0.541</td>
+              <td class="duration" data-value="541000000">0.541</td>
+              <td class="duration" data-value="541000000">0.541</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsGetRequestToGetPatientdemographicsById()</td>
+              <td>1</td>
+              <td class="duration" data-value="556000000">0.556</td>
+              <td class="duration" data-value="556000000">0.556</td>
+              <td class="duration" data-value="556000000">0.556</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsPUTRequestForPatientDemoGraphics()</td>
+              <td>1</td>
+              <td class="duration" data-value="555000000">0.555</td>
+              <td class="duration" data-value="555000000">0.555</td>
+              <td class="duration" data-value="555000000">0.555</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.userSendsPostRequest()</td>
+              <td>1</td>
+              <td class="duration" data-value="948000000">0.948</td>
+              <td class="duration" data-value="948000000">0.948</td>
+              <td class="duration" data-value="948000000">0.948</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.user_sends_Get_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="1954000000">1.954</td>
+              <td class="duration" data-value="1954000000">1.954</td>
+              <td class="duration" data-value="1954000000">1.954</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verifyAllGenderTypesArePresentInResponsebody(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.002</td>
+              <td class="duration" data-value="2000000">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verifyBelowNamePrefixArePresentInResponsebody(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="2000000">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verifyBelowNameSuffixArePresentInResponsebody(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="500000">0.000</td>
+              <td class="duration" data-value="500000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verifyBelowOfficialLanguageArePresentInResponsebody(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verifyTheInResponseHeaderIs(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verifyTheSINNumberIsUpdated()</td>
+              <td>1</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)</td>
+              <td>10</td>
+              <td class="duration" data-value="1100000">0.001</td>
+              <td class="duration" data-value="1100000">0.006</td>
+              <td class="duration" data-value="11000000">0.011</td>
+              <td class="failed">90.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>26</td>
+            <td>41</td>
+            <td class="duration">0.190</td>
+            <td class="duration">1.954</td>
+            <td class="duration">7.792</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

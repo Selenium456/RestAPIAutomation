@@ -1,0 +1,15 @@
+1595764340045	Delete elements
+1595771924945	Encapsulate field 'patientId'
+1595772084010	Encapsulate field 'namePrefix'
+1595772088411	Encapsulate field 'lastName'
+1595772094205	Encapsulate field 'firstName'
+1595772098947	Encapsulate field 'middleName'
+1595772103780	Encapsulate field 'nameSuffix'
+1595772108052	Encapsulate field 'gender'
+1595772112496	Encapsulate field 'dob'
+1595772116854	Encapsulate field 'preferredOfficialLanguage'
+1595772121383	Encapsulate field 'preferredSpokenLanguage'
+1595772125635	Encapsulate field 'sin'
+1595778659545	Delete elements
+1595779011261	Delete element
+1595780182421	Delete element

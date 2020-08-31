@@ -1,0 +1,915 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-16T05:58:09.196Z",
+        "line": 7,
+        "name": "Verify Response Header and response code for GetPatientDemographics",
+        "description": "",
+        "id": "patientdemographics-api;verify-response-header-and-response-code-for-getpatientdemographics",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1954000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User sends Get Request for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.user_sends_Get_request()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User extracts the responseheader",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheResponseheader()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the \"Content-Type\" in response header is \"application/json;charset\u003dUTF-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 12
+                },
+                {
+                  "val": "application/json;charset\u003dUTF-8",
+                  "offset": 49
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verifyTheInResponseHeaderIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:11.226Z",
+        "line": 13,
+        "name": "Verify Post Request for Patient Demographics",
+        "description": "",
+        "id": "patientdemographics-api;verify-post-request-for-patient-demographics",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 948000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User sends Post Request for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsPostRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User extracts the responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c201\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(PatientDemographicsSteps.java:66)\r\n\tat ✽.Verify the statuscode is \u0027201\u0027(file:///C:/Users/1025532/REXEMR/APIAutomation/src/test/resources/Feature/PatientDemoGraphics.feature:16)\r\n",
+              "duration": 6000000,
+              "status": "failed"
+            },
+            "line": 16,
+            "name": "Verify the statuscode is \u0027201\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:12.247Z",
+        "line": 18,
+        "name": "Verify PUT Request for Patient Demographics",
+        "description": "",
+        "id": "patientdemographics-api;verify-put-request-for-patient-demographics",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 555000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User sends PUT Request for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsPUTRequestForPatientDemoGraphics()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User extracts the responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Verify the SIN number is updated",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyTheSINNumberIsUpdated()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:12.963Z",
+        "line": 26,
+        "name": "Verify Get All Gender Request",
+        "description": "",
+        "id": "patientdemographics-api;verify-get-all-gender-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 557000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User sends GetAll GenderRequest for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsGetAllGenderRequestForPatientDemoGraphics()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User extracts the Gender responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheGenderResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Verify all Gender Types are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyAllGenderTypesArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Gender",
+                  "",
+                  "Genderdesc"
+                ]
+              },
+              {
+                "cells": [
+                  "M",
+                  "",
+                  "Male"
+                ]
+              },
+              {
+                "cells": [
+                  "F",
+                  "",
+                  "Female"
+                ]
+              },
+              {
+                "cells": [
+                  "O",
+                  "",
+                  "Other"
+                ]
+              },
+              {
+                "cells": [
+                  "U",
+                  "",
+                  "Unknown"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:13.577Z",
+        "line": 37,
+        "name": "Verify GetPatientDemographicsById endpoint",
+        "description": "",
+        "id": "patientdemographics-api;verify-getpatientdemographicsbyid-endpoint",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 556000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "User sends Get Request to get patientdemographics by id",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsGetRequestToGetPatientdemographicsById()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 50000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User extracts the responsebody for requestedPatientID",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheResponsebodyForRequestedPatientID()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:14.195Z",
+        "line": 42,
+        "name": "Verify all name prefix are extracted from getAllNamePrefix request",
+        "description": "",
+        "id": "patientdemographics-api;verify-all-name-prefix-are-extracted-from-getallnameprefix-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 553000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "User sends getAllNamePrefix for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsGetAllNamePrefixForPatientDemoGraphics()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "User extracts the namePrefix responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheNamePrefixResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Verify below Name prefix are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyBelowNamePrefixArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "namePrefixCode",
+                  "",
+                  "namePrefixDesc"
+                ]
+              },
+              {
+                "cells": [
+                  "Dr",
+                  "",
+                  "Doctor"
+                ]
+              },
+              {
+                "cells": [
+                  "Bro",
+                  "",
+                  "Brother"
+                ]
+              },
+              {
+                "cells": [
+                  "Mr",
+                  "",
+                  "Mister"
+                ]
+              },
+              {
+                "cells": [
+                  "Ms",
+                  "",
+                  "Ms"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:14.757Z",
+        "line": 53,
+        "name": "Verify all name suffix are extracted from getAllNamePrefix request",
+        "description": "",
+        "id": "patientdemographics-api;verify-all-name-suffix-are-extracted-from-getallnameprefix-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 604000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "User sends getAllNamesuffix for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsGetAllNameSuffixForPatientDemoGraphics()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 46000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "User extracts the namesuffix responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheNameSuffixResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Verify below Name suffix are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyBelowNameSuffixArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "namesuffixCode",
+                  "",
+                  "namesuffixDesc"
+                ]
+              },
+              {
+                "cells": [
+                  "Jr",
+                  "",
+                  "Junior"
+                ]
+              },
+              {
+                "cells": [
+                  "Sr",
+                  "",
+                  "Senior"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:15.426Z",
+        "line": 62,
+        "name": "Verify all Official Language details through getAllOfficialLanguage",
+        "description": "",
+        "id": "patientdemographics-api;verify-all-official-language-details-through-getallofficiallanguage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 462000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "User sends getAllOfficialLanguage request",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsGetAllOfficialLanguageRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "User extracts the OfficialLanguage responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheOfficialLanguageResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Verify below Official Language are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyBelowOfficialLanguageArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "officialLanguageCode",
+                  "",
+                  "officialLanguageDesc"
+                ]
+              },
+              {
+                "cells": [
+                  "ENG",
+                  "",
+                  "English"
+                ]
+              },
+              {
+                "cells": [
+                  "FRE",
+                  "",
+                  "French"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:15.947Z",
+        "line": 71,
+        "name": "Verify all PatientDemographicsList through getAllPatientDemographicsList",
+        "description": "",
+        "id": "patientdemographics-api;verify-all-patientdemographicslist-through-getallpatientdemographicslist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 541000000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "User sends getAllPatientDemographicsList request",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsGetAllPatientDemographicsListRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "User extracts the getAllPatientDemographicsList responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheGetAllPatientDemographicsListResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "Verify below Name prefix are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyBelowNamePrefixArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "namePrefixCode",
+                  "",
+                  "namePrefixDesc"
+                ]
+              },
+              {
+                "cells": [
+                  "Dr",
+                  "",
+                  "Doctor"
+                ]
+              },
+              {
+                "cells": [
+                  "Bro",
+                  "",
+                  "Brother"
+                ]
+              },
+              {
+                "cells": [
+                  "Mr",
+                  "",
+                  "Mister"
+                ]
+              },
+              {
+                "cells": [
+                  "Ms",
+                  "",
+                  "Ms"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "Verify below Name suffix are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyBelowNameSuffixArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "namesuffixCode",
+                  "",
+                  "namesuffixDesc"
+                ]
+              },
+              {
+                "cells": [
+                  "Jr",
+                  "",
+                  "Junior"
+                ]
+              },
+              {
+                "cells": [
+                  "Sr",
+                  "",
+                  "Senior"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "Verify below Official Language are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyBelowOfficialLanguageArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "officialLanguageCode",
+                  "",
+                  "officialLanguageDesc"
+                ]
+              },
+              {
+                "cells": [
+                  "ENG",
+                  "",
+                  "English"
+                ]
+              },
+              {
+                "cells": [
+                  "FRE",
+                  "",
+                  "French"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "Verify all Gender Types are present in responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.verifyAllGenderTypesArePresentInResponsebody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Gender",
+                  "",
+                  "Genderdesc"
+                ]
+              },
+              {
+                "cells": [
+                  "M",
+                  "",
+                  "Male"
+                ]
+              },
+              {
+                "cells": [
+                  "F",
+                  "",
+                  "Female"
+                ]
+              },
+              {
+                "cells": [
+                  "O",
+                  "",
+                  "Other"
+                ]
+              },
+              {
+                "cells": [
+                  "U",
+                  "",
+                  "Unknown"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-16T05:58:16.515Z",
+        "line": 96,
+        "name": "Verify Delete Request for Patient Demographics",
+        "description": "",
+        "id": "patientdemographics-api;verify-delete-request-for-patient-demographics",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 587000000,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "User sends Delete Request for PatientDemoGraphics",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userSendsDeleteRequestForPatientDemoGraphics()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 48000000,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "User extracts the responsebody",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.userExtractsTheResponsebody()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "Verify the statuscode is \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "the response is null",
+            "match": {
+              "location": "Steps.PatientDemographicsSteps.theResonseIsNull()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "PatientDemographics API",
+    "description": "  Description: The purpose of this tests is to cover \n  all CRUD operations of PatientDemographics API with different Dataset",
+    "id": "patientdemographics-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/PatientDemoGraphics.feature",
+    "tags": []
+  }
+]

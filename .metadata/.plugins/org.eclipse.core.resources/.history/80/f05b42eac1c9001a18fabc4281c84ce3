@@ -1,8 +1,0 @@
-Feature:  Tests for PatientDemographics API
-Description: Te purpose of this tests is to cover 
-all CRUD operations of PatientDemographics API with different Dataset
-
-Background: User Generate token for authorization
-Given  I generate token for Authorization
-
-

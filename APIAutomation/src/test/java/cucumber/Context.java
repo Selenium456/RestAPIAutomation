@@ -2,6 +2,9 @@ package cucumber;
 
 public enum Context {
 	
-	 PDGRESPONSE;
+	 PDGRESPONSE,
+	 RESPONSE,
+	 REQUESTBODY,
+	 RESPONSEHEADER
 
 }

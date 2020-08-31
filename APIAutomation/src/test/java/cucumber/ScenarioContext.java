@@ -18,6 +18,14 @@ public class ScenarioContext {
 	    public Object getContext(Context key){
 	        return scenarioContext.get(key.toString());
 	    }
+	    
+	    public void setContext(String key, Object value) {
+	        scenarioContext.put(key.toString(), value);
+	    }
+	 
+	    public Object getContext(String key){
+	        return scenarioContext.get(key.toString());
+	    }
 	 
 	    public Boolean isContains(Context key){
 	        return scenarioContext.containsKey(key.toString());

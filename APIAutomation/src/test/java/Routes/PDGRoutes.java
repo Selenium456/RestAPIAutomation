@@ -2,33 +2,63 @@ package Routes;
 
 public class PDGRoutes {
 	
-	private static final String demographics = "/demographics";
+	private  final String demographics = "/demographics";
 	
-	private static final String update = "/update";
+	private  final String update = "/update";
 	
-	private static final String create = "/create";
+	private  final String create = "/create";
 	
-	private static final String getPDGId = "/getByPatientDemographicsId";
+	private  final String getPDGId = "/getDemographicsByPatientId";
 	
-	private static final String delete = "/delete";
+	private  final String delete = "/delete";
 	
-	public static String demographics() {
+	private  final String gender = "/gender"; 
+	
+	private  final String namePrefix = "/namePrefix"; 
+	
+	private  final String nameSuffix = "/nameSuffix";
+	
+	private final String officialLanguage = "/officialLanguage";
+	
+	private final String patientDemographicsList = "/patientDemographicsList";
+	
+	public  String demographics() {
 		return demographics;
 	}
 
-	public static String update() {
+	public  String update() {
 		return demographics+update;
 	}
 	
-	public static String create() {
+	public  String create() {
 		return demographics+create;
 	}
 	
-	public static String getPDGID() {
+	public  String getPDGID() {
 		return demographics+getPDGId;
 	}
 	
-	public static String delete() {
+	public  String delete() {
 		return demographics+delete;
+	}
+	
+	public  String getGender() {
+		return demographics+gender;
+	}
+	
+	public  String getNamePrefix() {
+		return demographics+namePrefix;
+	}
+	
+	public  String getNameSuffux() {
+		return demographics+nameSuffix;
+	}
+	
+	public String getOfficialLanguage() {
+		return demographics+officialLanguage;
+	}
+	
+	public String getPatientDemographicsList() {
+		return demographics+patientDemographicsList;
 	}
 }

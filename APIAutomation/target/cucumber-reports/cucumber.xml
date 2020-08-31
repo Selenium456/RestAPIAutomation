@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="8.155">
+<testcase classname="PatientDemographics API" name="Verify Response Header and response code for GetPatientDemographics" time="2.017">
+<system-out><![CDATA[Given User sends Get Request for PatientDemoGraphics........................passed
+When User extracts the responseheader.......................................passed
+Then Verify the statuscode is '200'.........................................passed
+And Verify the "Content-Type" in response header is "application/json;charset=UTF-8".passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify Post Request for Patient Demographics" time="1.008">
+<failure message="expected:&lt;201&gt; but was:&lt;200&gt;" type="java.lang.AssertionError"><![CDATA[Given User sends Post Request for PatientDemoGraphics.......................passed
+When User extracts the responsebody.........................................passed
+Then Verify the statuscode is '201'.........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<201> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(PatientDemographicsSteps.java:66)
+	at ✽.Verify the statuscode is '201'(file:///C:/Users/1025532/REXEMR/APIAutomation/src/test/resources/Feature/PatientDemoGraphics.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify PUT Request for Patient Demographics" time="0.709">
+<system-out><![CDATA[Given User sends PUT Request for PatientDemoGraphics........................passed
+When User extracts the responsebody.........................................passed
+Then Verify the SIN number is updated.......................................passed
+And Verify the statuscode is '200'..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify Get All Gender Request" time="0.609">
+<system-out><![CDATA[Given User sends GetAll GenderRequest for PatientDemoGraphics...............passed
+When User extracts the Gender responsebody..................................passed
+Then Verify all Gender Types are present in responsebody....................passed
+And Verify the statuscode is '200'..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify GetPatientDemographicsById endpoint" time="0.609">
+<system-out><![CDATA[Given User sends Get Request to get patientdemographics by id...............passed
+When User extracts the responsebody for requestedPatientID..................passed
+Then Verify the statuscode is '200'.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify all name prefix are extracted from getAllNamePrefix request" time="0.556">
+<system-out><![CDATA[Given User sends getAllNamePrefix for PatientDemoGraphics...................passed
+When User extracts the namePrefix responsebody..............................passed
+Then Verify below Name prefix are present in responsebody...................passed
+And Verify the statuscode is '200'..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify all name suffix are extracted from getAllNamePrefix request" time="0.654">
+<system-out><![CDATA[Given User sends getAllNamesuffix for PatientDemoGraphics...................passed
+When User extracts the namesuffix responsebody..............................passed
+Then Verify below Name suffix are present in responsebody...................passed
+And Verify the statuscode is '200'..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify all Official Language details through getAllOfficialLanguage" time="0.514">
+<system-out><![CDATA[Given User sends getAllOfficialLanguage request.............................passed
+When User extracts the OfficialLanguage responsebody........................passed
+Then Verify below Official Language are present in responsebody.............passed
+And Verify the statuscode is '200'..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify all PatientDemographicsList through getAllPatientDemographicsList" time="0.562">
+<system-out><![CDATA[Given User sends getAllPatientDemographicsList request......................passed
+When User extracts the getAllPatientDemographicsList responsebody...........passed
+Then Verify below Name prefix are present in responsebody...................passed
+And Verify below Name suffix are present in responsebody....................passed
+And Verify below Official Language are present in responsebody..............passed
+And Verify all Gender Types are present in responsebody.....................passed
+And Verify the statuscode is '200'..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PatientDemographics API" name="Verify Delete Request for Patient Demographics" time="0.641">
+<system-out><![CDATA[Given User sends Delete Request for PatientDemoGraphics.....................passed
+When User extracts the responsebody.........................................passed
+Then Verify the statuscode is '200'.........................................passed
+And the response is null....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

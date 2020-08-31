@@ -1,12 +1,17 @@
 package Utils;
 
-import java.util.List;
+
+
+import org.json.simple.JSONObject;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 import io.restassured.response.Response;
 
 public interface IRestResponse<T> {
 	
-	 public T getBody();
+	 public T getBody(JSONObject response) throws JsonMappingException, JsonProcessingException, Exception;
 	 
 	
 	 

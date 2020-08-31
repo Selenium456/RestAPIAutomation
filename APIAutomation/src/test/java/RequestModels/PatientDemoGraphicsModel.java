@@ -13,9 +13,10 @@ public class PatientDemoGraphicsModel {
 	public String preferredOfficialLanguage;
 	public String preferredSpokenLanguage;
 	public String sin;
+	public String createdby;
 	
 	
-	public PatientDemoGraphicsModel(String patientId, String namePrefix, String lastName, String firstName, String middleName, String nameSuffix, String gender, String dob, String preferredOfficialLanguage, String preferredSpokenLanguage, String sin) {
+	public PatientDemoGraphicsModel(String patientId, String namePrefix, String lastName, String firstName, String middleName, String nameSuffix, String gender, String dob, String preferredOfficialLanguage, String preferredSpokenLanguage, String sin,String createdBy) {
 		
 		this.patientId = patientId;
 		this.namePrefix = namePrefix;
@@ -28,6 +29,7 @@ public class PatientDemoGraphicsModel {
 		this.preferredOfficialLanguage = preferredOfficialLanguage;
 		this.preferredSpokenLanguage = preferredSpokenLanguage;
 		this.sin = sin;
+		this.createdby = createdBy;
 		
 		}
 

@@ -1,0 +1,28 @@
+io.cucumber.junit.UndefinedStepException: The step "User sends Get Request for PatientDemoGraphics" is undefined. You can implement it using the snippet(s) below:
+
+@Given("User sends Get Request for PatientDemoGraphics")
+public void user_sends_get_request_for_patient_demo_graphics() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("User extracts the responseheader")
+public void user_extracts_the_responseheader() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Verify the statuscode is {string}")
+public void verify_the_statuscode_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Verify the {string} in response header is {string}")
+public void verify_the_in_response_header_is(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

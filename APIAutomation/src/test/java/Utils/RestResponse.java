@@ -1,6 +1,12 @@
 package Utils;
 
-import java.util.List;
+
+
+import org.json.simple.JSONObject;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.restassured.response.Response;
 
@@ -9,25 +15,26 @@ public class RestResponse<T> implements IRestResponse<T> {
 	
 	 private Response response;
 	 private Exception e;
+	 public ObjectMapper objectmapper;
 	
 	 public RestResponse(Class<T> t, Response response) {
 		 this.response = response;
 		 try{
 		 this.data = t.newInstance();
+		 objectmapper = new ObjectMapper();
 		 }catch (Exception e){
 		 throw new RuntimeException("There should be a default constructor in the Response POJO");
 		 }
 		 }
 
 	
+	@SuppressWarnings("unchecked")
 	@Override
-	public T getBody() {
-		try {
-			 data = (T) response.getBody().as(data.getClass());
-			 }catch (Exception e) {
-			 this.e=e;
-			 }
-			 return data;
+	public T getBody(JSONObject object) throws Exception, JsonProcessingException {
+		
+		String response = object.toJSONString();
+		
+		return  (T) objectmapper.readValue(response, data.getClass());
 
 	}
 	

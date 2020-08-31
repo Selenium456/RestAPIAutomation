@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: Runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.387 sec
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.37 sec <<< FAILURE! - in Runner.TestRunner
+Verify Post Request for Patient Demographics(PatientDemographics API)  Time elapsed: 1.023 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<201> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at Steps.PatientDemographicsSteps.verify_the_statuscode_is_OK(PatientDemographicsSteps.java:66)
+	at ?.Verify the statuscode is '201'(file:///C:/Users/1025532/REXEMR/APIAutomation/src/test/resources/Feature/PatientDemoGraphics.feature:16)
+

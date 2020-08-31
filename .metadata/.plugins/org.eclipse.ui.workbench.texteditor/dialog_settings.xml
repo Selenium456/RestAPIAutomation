@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="RestResponse"/>
-		<item key="wrap" value="true"/>
+		<item key="selection" value="true"/>
+		<item key="wrap" value="false"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="RestResponse"/>
-			<item value="The response body for date is null"/>
-			<item value="Scenario: Get PatientDemoGraphics Records for All patients"/>
-			<item value="post"/>
+			<item value="serenity"/>
+			<item value="update"/>
+			<item value="put"/>
+			<item value="nameprefix"/>
+			<item value="readjson"/>
+			<item value="verify the sin"/>
+			<item value="user sends"/>
+			<item value="UpdateDemoGraphics"/>
+			<item value="suffix"/>
+			<item value="extent"/>
+			<item value="cucumber"/>
+			<item value="&#x09;&#x09;String patientID = getReadJson().getItem(jsonBody, &quot;patientId&quot;);"/>
+			<item value="responseJson"/>
+			<item value="reponseobject"/>
+			<item value="userSendsPostRequestForPatientDemoGraphics"/>
 		</list>
 		<list key="replacehistory">
 		</list>
